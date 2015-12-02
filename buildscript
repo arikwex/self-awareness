@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Copy source to temporary build directory
+cp -r src/ tmp/
+
+# Compute the expected commit hash
+COMMIT_HASH=`(printf "commit %s\0" $(git cat-file commit HEAD | wc -c); git cat-file commit HEAD) | shasum -a 1 | cut -d' ' -f 1`
+
+# Replace all occurences of the version
+sed -i '' -- "s/GIT_VERSION_HOOK='default'/GIT_VERSION_HOOK='$COMMIT_HASH'/g" tmp/*
+
+# Build the code and output to dist
+coffee -o dist -c tmp/*.coffee
+
+# Clean up
+rm -rf tmp/
