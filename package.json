@@ -1,0 +1,19 @@
+{
+  "name": "SelfAwareness",
+  "version": "1.0.0",
+  "description": "When your built application needs to know its own commit hash",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arikwex/self-awareness.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arikwex/self-awareness/issues"
+  },
+  "homepage": "https://github.com/arikwex/self-awareness"
+}
