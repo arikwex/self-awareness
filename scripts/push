@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Need to run the build that substitutes version
-npm run build
+npm run build-sub
 
 # Get commit author date and last commit date
 AUTHOR_DATE=`git cat-file commit HEAD | sed -n '3p' | rev | cut -d' ' -f 2 | rev`
@@ -11,4 +11,4 @@ COMMIT_DATE=`git cat-file commit HEAD | sed -n '4p' | rev | cut -d' ' -f 2 | rev
 GIT_COMMITTER_DATE="`date -r $COMMIT_DATE`" git commit --amend --date="$(date -r $AUTHOR_DATE)" --no-edit
 
 # Now you can push
-# git push
+git push

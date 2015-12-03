@@ -4,8 +4,9 @@
   "description": "When your built application needs to know its own commit hash",
   "main": "index.js",
   "scripts": {
-    "build": "./buildscript",
-    "push": "./pushscript"
+    "build": "./scripts/build",
+    "build-sub": "./scripts/build-sub",
+    "push": "./scripts/push"
   },
   "repository": {
     "type": "git",

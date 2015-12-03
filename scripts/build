@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Build the code and output to dist
+coffee -o dist -c src/*.coffee
