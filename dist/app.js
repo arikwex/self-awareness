@@ -2,7 +2,7 @@
 (function() {
   var GIT_VERSION_HOOK;
 
-  GIT_VERSION_HOOK = 'b8fdb6af3e9d6479701874b903732d50f6b9db7b';
+  GIT_VERSION_HOOK = '8b5633daca03453d5101ecab581dfb80feaa45d8';
 
   console.log("This software is running version " + GIT_VERSION_HOOK);
 
