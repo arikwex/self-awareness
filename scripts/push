@@ -6,6 +6,9 @@ npm run build-sub
 # Get commit author date and last commit date
 AUTHOR_DATE=`git cat-file commit HEAD | sed -n '3p' | rev | cut -d' ' -f 2 | rev`
 COMMIT_DATE=`git cat-file commit HEAD | sed -n '4p' | rev | cut -d' ' -f 2 | rev`
+echo 'DATES------'
+echo $AUTHOR_DATE
+echo $COMMIT_DATE
 
 # Track the newly built changes
 git add dist/
