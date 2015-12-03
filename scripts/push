@@ -3,12 +3,12 @@
 # Need to run the build that substitutes version
 npm run build-sub
 
-# Track the newly built changes
-git add dist/
-
 # Get commit author date and last commit date
 AUTHOR_DATE=`git cat-file commit HEAD | sed -n '3p' | rev | cut -d' ' -f 2 | rev`
 COMMIT_DATE=`git cat-file commit HEAD | sed -n '4p' | rev | cut -d' ' -f 2 | rev`
+
+# Track the newly built changes
+git add dist/
 
 # Amend to the commit without altering the hash
 GIT_COMMITTER_DATE="`date -r $COMMIT_DATE`" git commit --amend --date="$(date -r $AUTHOR_DATE)" --no-edit
