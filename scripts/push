@@ -14,7 +14,7 @@ echo $COMMIT_DATE
 git add dist/
 
 # Amend to the commit without altering the hash
-GIT_COMMITTER_DATE="`date -r $COMMIT_DATE`" git commit --amend --date="$(date -r $AUTHOR_DATE)" --no-edit
+GIT_COMMITTER_DATE="`date -r $COMMIT_DATE`" git commit --amend --date="$(date -r $AUTHOR_DATE)"
 
 # Now you can push
 git push
